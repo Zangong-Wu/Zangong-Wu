@@ -1,20 +1,15 @@
 package lib;
-import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Readfile {
 	public static double readTxtFile(String filePath1,String filePath2) {
 		 File file1=new File(filePath1);
 		 File file2=new File(filePath2);
-		 List<String> s1=new ArrayList<String>();
-		 List<String> s2=new ArrayList<String>();
 		 String str1=new String();
 		 String str2=new String();
 		try {
@@ -31,10 +26,10 @@ public class Readfile {
 				
 				 while((lineTxt1 = bufferedReader1.readLine()) != null){
 					 str1+=lineTxt1;
-					// s1.add(lineTxt1);
+					
 				 }
 				 while((lineTxt2 = bufferedReader2.readLine()) != null){
-					 //s2.add(lineTxt2);
+					 
 					 str2+=lineTxt2;
 				 }
 				 read1.close();
@@ -55,9 +50,7 @@ public class Readfile {
 		//String filePath1 = "C:\\Users\\715019816\\Desktop\\test\\orig.txt";
 		//String filePath2 = "C:\\Users\\715019816\\Desktop\\test\\orig_0.8_add.txt";
 		System.out.println("请输入原文路径");
-		//Scanner path1= new Scanner(System.in);
-		//if(path1==null){
-		//	System.out.println("有误,请重新输入");
+		
 		
 		System.out.println("请输入比较文件路径");
 		//Scanner path2= new Scanner(System.in);
